@@ -1,0 +1,7 @@
+{
+  "ratings": "/user/ur{{user}}/ratings?view=compact",
+  "watchlist": "/user/ur{{user}}/watchlist?view=compact",
+  "checkins": "/user/ur{{user}}/checkins?view=compact",
+  "list": "/list/ls{{list}}?view=compact",
+  "top": "/chart/top"
+}
