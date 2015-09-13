@@ -75,6 +75,10 @@ Scrapper.prototype._parse = function(href, html) {
 };
 
 Scrapper.prototype._read = function() {
+  if (this._ended && !this._holding.length) {
+    this.push(null);
+  }
+
   if (!this._holding.length) {
     this._waiting = true;
     return;
@@ -86,10 +90,6 @@ Scrapper.prototype._read = function() {
     id: this._holding.shift()
   })) {
     return this._read();
-  }
-
-  if (this._ended && !this._holding.length) {
-    this.push(null);
   }
 };
 
